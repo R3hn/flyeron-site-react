@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #0D0D0D;
+  --color-surface: #0D0D0D;
+  --color-accent: #D95032;
+  --color-text-light: #F2F2F2;
+  --color-text-muted: #7A7A7A;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0D0D0D;
+  color: #F2F2F2;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Glow border utility */
+.glow-border {
+  border: 1px solid #D95032;
+  box-shadow: 0 0 8px 0 #D95032;
+}
+
+/* Button base */
+.btn-outline {
+  display: inline-block;
+  border: 1px solid #D95032;
+  border-radius: 0px 100px 100px 100px;
+  padding: 17px 60px;
+  color: #F2F2F2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  box-shadow: 0 0 4px 0 #D95032;
+  background: transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  color: #D95032;
+  border-color: #D95032;
+}
+
+.btn-rounded {
+  display: inline-block;
+  border: 2px solid #D95032;
+  border-radius: 100px;
+  padding: 18px 65px;
+  color: #F2F2F2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  box-shadow: 0 0 5px 0 #D95032;
+  background: #0D0D0D;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-rounded:hover {
+  color: #F2F2F2;
+}
+
+/* Section headings */
+.section-eyebrow {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: #F2F2F2;
+}
+
+.section-title {
+  font-size: clamp(28px, 3vw, 48px);
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 1em;
+  color: #D95032;
+}
+
+/* FAQ accordion */
+.faq-item details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.faq-item details > summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item details[open] summary .faq-arrow {
+  transform: rotate(180deg);
+}
+
+/* Tabs */
+.tab-active {
+  text-decoration: underline;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5) !important;
+}
+
