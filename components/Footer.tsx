@@ -1,12 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer
       style={{
-        background: "#0D0D0D",
-        borderTop: "1px solid #1a1a1a",
-        padding: "40px 8%",
+        background: "#0E296B",
+        borderTop: "1px solid #085CF0",
+        padding: "clamp(30px, 5vw, 40px) clamp(15px, 5vw, 8%)",
         display: "flex",
         flexDirection: "column",
         gap: 20,
@@ -14,16 +16,16 @@ export default function Footer() {
       }}
     >
       {/* Logo */}
-      <a href="/">
+      <Link href="/">
         <Image
-          src="https://flyeron-site.vercel.app/wp-content/uploads/elementor/thumbs/Logo-Flyer-On-1-qtmjvywc3m7hf2uzedz6aohla3pjw5jqmoyrnrc8jo.png"
+          src="/logo.png"
           alt="Logo Flyer On"
-          width={160}
-          height={46}
+          width={120}
+          height={34}
           unoptimized
           style={{ objectFit: "contain" }}
         />
-      </a>
+      </Link>
 
       {/* Tagline */}
       <p
@@ -31,7 +33,7 @@ export default function Footer() {
           fontFamily: "'Poppins', sans-serif",
           fontSize: 14,
           fontWeight: 300,
-          color: "#888",
+          color: "#C1D9E0",
           textAlign: "center",
         }}
       >
@@ -44,22 +46,22 @@ export default function Footer() {
           {
             href: "https://www.instagram.com/flyer_on/",
             label: "Instagram",
-            icon: "📷",
+            icon: <img src="https://cdn.simpleicons.org/instagram/F2F2F2" width={18} height={18} alt="Instagram" />,
           },
           {
             href: "https://youtube.com/@flyer_on",
             label: "Youtube",
-            icon: "▶️",
+            icon: <img src="https://cdn.simpleicons.org/youtube/F2F2F2" width={18} height={18} alt="Youtube" />,
           },
           {
             href: "https://g.co/kgs/D2rWiKg",
             label: "Google",
-            icon: "🔍",
+            icon: <img src="https://cdn.simpleicons.org/google/F2F2F2" width={18} height={18} alt="Google" />,
           },
           {
             href: "mailto:contato@flyeron.com.br",
             label: "Email",
-            icon: "✉️",
+            icon: <Mail size={18} />,
           },
         ].map((s) => (
           <a
@@ -78,7 +80,7 @@ export default function Footer() {
             }}
             title={s.label}
           >
-            <span style={{ fontSize: 18 }}>{s.icon}</span>
+            <span style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>{s.icon}</span>
             <span>{s.label}</span>
           </a>
         ))}
@@ -90,7 +92,7 @@ export default function Footer() {
           fontFamily: "'Poppins', sans-serif",
           fontSize: 13,
           fontWeight: 300,
-          color: "#555",
+          color: "#C1D9E0",
           textAlign: "center",
         }}
       >

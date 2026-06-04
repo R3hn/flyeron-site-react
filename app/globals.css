@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #0D0D0D;
-  --color-surface: #0D0D0D;
-  --color-accent: #D95032;
+  --color-bg: #0E296B;
+  --color-surface: #0E296B;
+  --color-accent: #C1D9E0;
   --color-text-light: #F2F2F2;
-  --color-text-muted: #7A7A7A;
+  --color-text-muted: #C1D9E0;
 }
 
 * {
@@ -19,57 +19,60 @@ html {
 }
 
 body {
-  background: #0D0D0D;
+  background: #0E296B;
   color: #F2F2F2;
   font-family: 'Poppins', sans-serif;
 }
 
 /* Glow border utility */
 .glow-border {
-  border: 1px solid #D95032;
-  box-shadow: 0 0 8px 0 #D95032;
+  border: 1px solid #C1D9E0;
+  box-shadow: 0 0 8px 0 #C1D9E0;
 }
 
 /* Button base */
 .btn-outline {
   display: inline-block;
-  border: 1px solid #D95032;
+  border: 1px solid #085CF0;
   border-radius: 0px 100px 100px 100px;
-  padding: 17px 60px;
-  color: #F2F2F2;
+  padding: clamp(14px, 2vw, 17px) clamp(30px, 5vw, 60px);
+  color: #FFFFFF;
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 500;
   text-decoration: none;
-  box-shadow: 0 0 4px 0 #D95032;
-  background: transparent;
+  box-shadow: 0 0 10px 0 rgba(8, 92, 240, 0.4);
+  background: #085CF0;
   transition: all 0.2s ease;
   cursor: pointer;
+  text-align: center;
 }
 
 .btn-outline:hover {
-  color: #D95032;
-  border-color: #D95032;
+  background: #0640a3;
+  border-color: #0640a3;
 }
 
 .btn-rounded {
   display: inline-block;
-  border: 2px solid #D95032;
+  border: 2px solid #085CF0;
   border-radius: 100px;
-  padding: 18px 65px;
-  color: #F2F2F2;
+  padding: clamp(14px, 2vw, 18px) clamp(30px, 5vw, 65px);
+  color: #FFFFFF;
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 500;
   text-decoration: none;
-  box-shadow: 0 0 5px 0 #D95032;
-  background: #0D0D0D;
+  box-shadow: 0 0 10px 0 rgba(8, 92, 240, 0.4);
+  background: #085CF0;
   transition: all 0.2s ease;
   cursor: pointer;
+  text-align: center;
 }
 
 .btn-rounded:hover {
-  color: #F2F2F2;
+  background: #0640a3;
+  border-color: #0640a3;
 }
 
 /* Section headings */
@@ -85,7 +88,7 @@ body {
   font-weight: 500;
   letter-spacing: -1px;
   line-height: 1em;
-  color: #D95032;
+  color: #FFFFFF;
 }
 
 /* FAQ accordion */

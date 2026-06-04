@@ -24,117 +24,143 @@ export default function Testimonials() {
     <section
       id="depoimentos"
       style={{
-        background: "#0D0D0D",
-        padding: "3% 8%",
-        display: "flex",
-        flexDirection: "column",
-        gap: 50,
-        alignItems: "stretch",
+        background: "#0E296B",
+        padding: "clamp(40px, 8vw, 70px) clamp(20px, 5vw, 100px)",
       }}
+      className="max-md:px-5"
     >
       {/* Header */}
-      <div>
-        <p
-          style={{
-            textAlign: "center",
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: 20,
-            fontWeight: 400,
-            letterSpacing: -1,
-            color: "#F2F2F2",
-            marginBottom: -50,
-          }}
-        >
-          Depoimentos
-        </p>
-        <h2
-          style={{
-            textAlign: "center",
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: "clamp(24px, 3vw, 48px)",
-            fontWeight: 500,
-            letterSpacing: -1,
-            lineHeight: "1em",
-            color: "#D95032",
-            paddingTop: 60,
-          }}
-        >
-          Veja o que nossos clientes dizem
-        </h2>
-      </div>
+      <p
+        style={{
+          textAlign: "center",
+          fontFamily: "'Poppins', sans-serif",
+          fontSize: 14,
+          fontWeight: 400,
+          letterSpacing: 2,
+          textTransform: "uppercase",
+          color: "#C1D9E0",
+          marginBottom: "10px",
+        }}
+      >
+        Depoimentos
+      </p>
+      <h2
+        style={{
+          textAlign: "center",
+          fontFamily: "'Poppins', sans-serif",
+          fontSize: "clamp(24px, 3vw, 48px)",
+          fontWeight: 500,
+          letterSpacing: -1,
+          lineHeight: "1em",
+          color: "#FFFFFF",
+          paddingBottom: "50px",
+        }}
+      >
+        A confiança construída em cada resultado.
+      </h2>
 
       {/* Testimonials row */}
       <div
         style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          gap: 60,
-          flexWrap: "wrap",
+          display: "grid",
+          gap: 24,
         }}
+        className="grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto"
       >
-        {testimonials.map((t) => (
-          <div
-            key={t.name}
-            style={{
-              flex: "1 1 280px",
-              display: "flex",
-              flexDirection: "column",
-              gap: 12,
-            }}
-          >
-            {/* Stars */}
-            <div style={{ color: "#D95032", fontSize: 20, letterSpacing: 2 }}>
-              ★★★★★
-            </div>
-            <p
+        {testimonials.map((t) => {
+          const initial = t.name.charAt(0).toUpperCase();
+
+          return (
+            <div
+              key={t.name}
               style={{
-                fontFamily: "'Poppins', sans-serif",
-                fontSize: 16,
-                fontWeight: 300,
-                lineHeight: 1.5,
-                color: "#F2F2F2",
+                background: "#0E296B",
+                padding: "clamp(20px, 5vw, 40px)",
+                border: "1px solid rgba(193, 217, 224, 0.2)",
+                borderRadius: 8,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                gap: 30,
               }}
             >
-              &ldquo;{t.quote}&rdquo;
-            </p>
-            <div>
               <p
                 style={{
                   fontFamily: "'Poppins', sans-serif",
                   fontSize: 16,
-                  fontWeight: 500,
-                  fontStyle: "italic",
+                  fontWeight: 300,
+                  lineHeight: 1.6,
                   color: "#F2F2F2",
-                  lineHeight: 1.3,
+                  fontStyle: "italic",
                 }}
               >
-                {t.name}
+                &ldquo;{t.quote}&rdquo;
               </p>
-              <p
+
+              <div
                 style={{
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: 36,
-                  fontWeight: 600,
-                  color: "#F3F5F8",
-                  lineHeight: 1.1,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 16,
                 }}
               >
-                {t.company}
-              </p>
+                <div
+                  style={{
+                    width: 45,
+                    height: 45,
+                    borderRadius: "50%",
+                    background: "rgba(193, 217, 224, 0.2)",
+                    color: "#C1D9E0",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontFamily: "'Poppins', sans-serif",
+                    fontSize: "clamp(15px, 2vw, 18px)",
+                    fontWeight: 500,
+                    flexShrink: 0,
+                  }}
+                >
+                  {initial}
+                </div>
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: 15,
+                      fontWeight: 600,
+                      color: "#FFFFFF",
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    {t.name}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: 13,
+                      fontWeight: 400,
+                      color: "#C1D9E0",
+                      marginTop: 4,
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    {t.company}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* CTA */}
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: 50 }}>
         <a
-          href="https://flyeron-site.vercel.app/depoimentos/"
+          href="https://api.whatsapp.com/send?phone=558193257368"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-outline"
-          style={{ color: "#D95032", borderColor: "#D95032" }}
+          style={{ color: "#C1D9E0", borderColor: "#C1D9E0" }}
         >
           Ver mais
         </a>

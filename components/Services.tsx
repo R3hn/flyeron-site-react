@@ -67,26 +67,27 @@ export default function Services() {
     <section
       id="servicos"
       style={{
-        background: "#0D0D0D",
+        background: "#0E296B",
         padding: "0 0",
       }}
     >
       {/* Header */}
-      <div style={{ padding: "50px 100px 0 100px" }}>
+      <div style={{ padding: "clamp(40px, 8vw, 50px) clamp(20px, 5vw, 100px) 0 clamp(20px, 5vw, 100px)" }}>
         <p
-          style={{
-            textAlign: "center",
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: 20,
-            fontWeight: 400,
-            letterSpacing: -1,
-            color: "#F2F2F2",
-            marginBottom: -30,
-          }}
-        >
-          Nossos serviços
-        </p>
-        <h2
+        style={{
+          textAlign: "center",
+          fontFamily: "'Poppins', sans-serif",
+          fontSize: 14,
+          fontWeight: 400,
+          letterSpacing: 2,
+          textTransform: "uppercase",
+          color: "#C1D9E0",
+          marginBottom: "10px",
+        }}
+      >
+        Nossos serviços
+      </p>
+      <h2
           style={{
             textAlign: "center",
             fontFamily: "'Poppins', sans-serif",
@@ -94,7 +95,7 @@ export default function Services() {
             fontWeight: 500,
             letterSpacing: -1,
             lineHeight: "1em",
-            color: "#D95032",
+            color: "#FFFFFF",
             paddingBottom: "3%",
           }}
         >
@@ -109,7 +110,7 @@ export default function Services() {
           flexWrap: "wrap",
           justifyContent: "center",
           gap: 10,
-          padding: "0 40px 30px 40px",
+          padding: "0 clamp(20px, 5vw, 40px) 30px clamp(20px, 5vw, 40px)",
         }}
       >
         {services.map((s) => (
@@ -117,8 +118,8 @@ export default function Services() {
             key={s.id}
             onClick={() => setActiveTab(s.id)}
             style={{
-              background: "#0D0D0D",
-              border: "2px solid #D95032",
+              background: "#0E296B",
+              border: "2px solid #C1D9E0",
               borderRadius: 10,
               padding: "10px 20px",
               color: "#F2F2F2",
@@ -129,7 +130,7 @@ export default function Services() {
               boxShadow:
                 activeTab === s.id
                   ? "0 0 10px 0 rgba(0,0,0,0.5)"
-                  : "0 0 5px 0 #D95032",
+                  : "0 0 5px 0 #C1D9E0",
               textDecoration: activeTab === s.id ? "underline" : "none",
               transition: "all 0.2s",
             }}
@@ -142,8 +143,8 @@ export default function Services() {
       {/* Tab content */}
       <div
         style={{
-          background: "#0D0D0D",
-          padding: "40px 80px",
+          background: "#0E296B",
+          padding: "clamp(30px, 5vw, 40px) clamp(20px, 5vw, 80px)",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
@@ -152,14 +153,14 @@ export default function Services() {
         }}
       >
         {/* Text */}
-        <div style={{ flex: "1 1 320px" }}>
+        <div style={{ flex: "1 1 280px" }}>
           <h3
             style={{
               fontFamily: "'Poppins', sans-serif",
               fontSize: "clamp(22px, 2.5vw, 38px)",
               fontWeight: 500,
               letterSpacing: -1,
-              color: "#D95032",
+              color: "#FFFFFF",
               marginBottom: 20,
             }}
           >
@@ -178,7 +179,7 @@ export default function Services() {
             {active.description}
           </p>
           <a
-            href="https://wa.me/message/FLOCK2MGFGFCO1"
+            href="https://api.whatsapp.com/send?phone=558193257368"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline"
@@ -202,7 +203,7 @@ export default function Services() {
             width={380}
             height={380}
             unoptimized
-            style={{ objectFit: "contain", borderRadius: 10 }}
+            style={{ objectFit: "contain", borderRadius: 10, maxWidth: "100%", height: "auto" }}
           />
         </div>
       </div>

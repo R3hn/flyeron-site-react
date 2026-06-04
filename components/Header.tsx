@@ -8,17 +8,17 @@ export default function Header() {
 
   return (
     <header
-      style={{ background: "#0D0D0D", borderBottom: "1px solid #1a1a1a" }}
+      style={{ background: "#0E296B", borderBottom: "1px solid #085CF0" }}
       className="w-full sticky top-0 z-50"
     >
       <div
         className="max-w-6xl mx-auto flex items-center justify-between"
-        style={{ padding: "16px 40px" }}
+        style={{ padding: "16px clamp(15px, 5vw, 40px)" }}
       >
         {/* Logo */}
         <Link href="/">
           <Image
-            src="https://flyeron-site.vercel.app/wp-content/uploads/elementor/thumbs/Logo-Flyer-On-1-qtmjvywa9u0u02mds0of4k81q3e3wiq5t030fnmei0.png"
+            src="/logo.png"
             alt="Logo Flyer On"
             width={140}
             height={40}
@@ -33,9 +33,7 @@ export default function Header() {
             { label: "Início", href: "#hero" },
             { label: "Serviços", href: "#servicos" },
             { label: "Depoimentos", href: "#depoimentos" },
-            { label: "Sobre", href: "#sobre" },
             { label: "FAQ", href: "#faq" },
-            { label: "Blog", href: "#blog" },
           ].map((item) => (
             <a
               key={item.href}
@@ -47,17 +45,17 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="https://wa.me/message/FLOCK2MGFGFCO1"
+            href="https://api.whatsapp.com/send?phone=558193257368"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              border: "1px solid #D95032",
+              border: "1px solid #C1D9E0",
               borderRadius: "0 100px 100px 100px",
               padding: "10px 28px",
               color: "#F2F2F2",
               fontSize: 14,
               fontWeight: 500,
-              boxShadow: "0 0 4px 0 #D95032",
+              boxShadow: "0 0 4px 0 #C1D9E0",
               textDecoration: "none",
               whiteSpace: "nowrap",
             }}
@@ -110,9 +108,9 @@ export default function Header() {
       {menuOpen && (
         <div
           style={{
-            background: "#0D0D0D",
-            borderTop: "1px solid #222",
-            padding: "20px 40px",
+            background: "#0E296B",
+            borderTop: "1px solid rgba(193, 217, 224, 0.2)",
+            padding: "20px clamp(15px, 5vw, 40px)",
           }}
           className="md:hidden flex flex-col gap-4"
         >
@@ -120,9 +118,7 @@ export default function Header() {
             { label: "Início", href: "#hero" },
             { label: "Serviços", href: "#servicos" },
             { label: "Depoimentos", href: "#depoimentos" },
-            { label: "Sobre", href: "#sobre" },
             { label: "FAQ", href: "#faq" },
-            { label: "Blog", href: "#blog" },
           ].map((item) => (
             <a
               key={item.href}

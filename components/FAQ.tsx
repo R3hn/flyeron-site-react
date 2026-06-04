@@ -26,7 +26,7 @@ export default function FAQ() {
     <section
       id="faq"
       style={{
-        background: "#0D0D0D",
+        background: "#0E296B",
         padding: "1% 0 8% 0",
         display: "flex",
         flexDirection: "column",
@@ -36,19 +36,20 @@ export default function FAQ() {
       {/* Header */}
       <div>
         <p
-          style={{
-            textAlign: "center",
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: 20,
-            fontWeight: 400,
-            letterSpacing: -1,
-            color: "#F2F2F2",
-            marginBottom: -40,
-          }}
-        >
-          Perguntas frequentes
-        </p>
-        <h2
+        style={{
+          textAlign: "center",
+          fontFamily: "'Poppins', sans-serif",
+          fontSize: 14,
+          fontWeight: 400,
+          letterSpacing: 2,
+          textTransform: "uppercase",
+          color: "#C1D9E0",
+          marginBottom: "10px",
+        }}
+      >
+        Perguntas frequentes
+      </p>
+      <h2
           style={{
             textAlign: "center",
             fontFamily: "'Poppins', sans-serif",
@@ -56,7 +57,7 @@ export default function FAQ() {
             fontWeight: 500,
             letterSpacing: -1,
             lineHeight: "1em",
-            color: "#D95032",
+            color: "#FFFFFF",
             padding: "0 0 2%",
             marginTop: 50,
           }}
@@ -71,7 +72,7 @@ export default function FAQ() {
           maxWidth: 800,
           width: "100%",
           margin: "0 auto",
-          padding: "0 40px",
+          padding: "0 clamp(20px, 5vw, 40px)",
           display: "flex",
           flexDirection: "column",
           gap: 0,
@@ -106,8 +107,8 @@ export default function FAQ() {
               <span>{faq.question}</span>
               <span
                 style={{
-                  fontSize: 20,
-                  color: "#D95032",
+                  fontSize: "clamp(16px, 2vw, 20px)",
+                  color: "#C1D9E0",
                   transition: "transform 0.2s",
                   transform: open === idx ? "rotate(180deg)" : "rotate(0deg)",
                   flexShrink: 0,
@@ -123,7 +124,7 @@ export default function FAQ() {
                   fontSize: 15,
                   fontWeight: 300,
                   lineHeight: 1.6,
-                  color: "#cccccc",
+                  color: "#C1D9E0",
                   paddingBottom: 22,
                   whiteSpace: "pre-line",
                 }}
@@ -138,7 +139,7 @@ export default function FAQ() {
       {/* CTA */}
       <div style={{ display: "flex", justifyContent: "center", marginTop: 50 }}>
         <a
-          href="https://wa.me/message/FLOCK2MGFGFCO1"
+          href="https://api.whatsapp.com/send?phone=558193257368"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-outline"

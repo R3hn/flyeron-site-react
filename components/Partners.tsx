@@ -27,88 +27,59 @@ export default function Partners() {
   return (
     <section
       style={{
-        background: "#0D0D0D",
-        padding: "5% 0",
-        display: "flex",
-        flexDirection: "column",
-        gap: 30,
-        alignItems: "stretch",
+        background: "#0E296B",
+        padding: "clamp(30px, 5vw, 40px) clamp(20px, 5vw, 100px)",
+        borderTop: "1px solid rgba(193, 217, 224, 0.2)",
+        borderBottom: "1px solid rgba(193, 217, 224, 0.2)",
       }}
+      className="max-md:px-5"
     >
-      {/* Header */}
-      <div>
-        <p
-          style={{
-            textAlign: "center",
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: 20,
-            fontWeight: 400,
-            letterSpacing: -1,
-            color: "#F2F2F2",
-            marginBottom: -40,
-          }}
-        >
-          Parcerias e clientes
-        </p>
-        <h2
-          style={{
-            textAlign: "center",
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: "clamp(22px, 3vw, 48px)",
-            fontWeight: 500,
-            letterSpacing: -1,
-            lineHeight: "1em",
-            color: "#D95032",
-            padding: "0 0 1%",
-            marginTop: 50,
-          }}
-        >
-          Clientes que se tornaram grandes parceiros
-        </h2>
-      </div>
+      <p
+        style={{
+          textAlign: "center",
+          fontFamily: "'Poppins', sans-serif",
+          fontSize: 14,
+          fontWeight: 400,
+          letterSpacing: 2,
+          textTransform: "uppercase",
+          color: "#C1D9E0",
+          marginBottom: "10px",
+        }}
+      >
+        Marcas que confiam na Flyer On
+      </p>
 
       {/* Logos */}
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
-          gap: 20,
-          padding: "20px 60px",
-          maxWidth: "60%",
+          gap: 30,
+          maxWidth: "1000px",
           margin: "0 auto",
         }}
       >
-        {clients.map((c) => (
+        {clients.map((c, i) => (
           <a
-            key={c.alt}
+            key={i}
             href={c.src}
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:opacity-100 transition-opacity"
+            style={{ display: "block", opacity: 0.6 }}
           >
             <Image
               src={c.src}
               alt={c.alt}
-              width={120}
-              height={120}
+              width={100}
+              height={40}
               unoptimized
-              style={{ objectFit: "contain" }}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.8 }}
             />
           </a>
         ))}
-      </div>
-
-      {/* CTA */}
-      <div style={{ display: "flex", justifyContent: "center", marginTop: 20 }}>
-        <a
-          href="https://wa.me/message/FLOCK2MGFGFCO1"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-outline"
-        >
-          Quero iniciar uma parceria!
-        </a>
       </div>
     </section>
   );

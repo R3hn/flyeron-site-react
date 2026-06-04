@@ -3,7 +3,7 @@ export default function About() {
     <section
       id="sobre"
       style={{
-        background: "#0D0D0D",
+        background: "#0E296B",
         padding: "2% 0",
         display: "flex",
         flexDirection: "column",
@@ -14,19 +14,20 @@ export default function About() {
       {/* Header */}
       <div>
         <p
-          style={{
-            textAlign: "center",
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: 20,
-            fontWeight: 400,
-            letterSpacing: -1,
-            color: "#F2F2F2",
-            marginBottom: -40,
-          }}
-        >
-          Sobre a Flyer On
-        </p>
-        <h2
+        style={{
+          textAlign: "center",
+          fontFamily: "'Poppins', sans-serif",
+          fontSize: 14,
+          fontWeight: 400,
+          letterSpacing: 2,
+          textTransform: "uppercase",
+          color: "#C1D9E0",
+          marginBottom: "10px",
+        }}
+      >
+        Sobre a Flyer On
+      </p>
+      <h2
           style={{
             textAlign: "center",
             fontFamily: "'Poppins', sans-serif",
@@ -34,7 +35,7 @@ export default function About() {
             fontWeight: 500,
             letterSpacing: -1,
             lineHeight: "1em",
-            color: "#D95032",
+            color: "#FFFFFF",
             padding: "0 0 1%",
             marginTop: 50,
           }}
@@ -44,10 +45,10 @@ export default function About() {
       </div>
 
       {/* Video placeholder */}
-      <div style={{ padding: "0 250px" }} className="video-wrapper">
+      <div className="w-full px-5 md:px-[100px] lg:px-[250px] mx-auto">
         <div
           style={{
-            background: "#111",
+            background: "rgba(193, 217, 224, 0.05)",
             borderRadius: 20,
             aspectRatio: "16/9",
             display: "flex",
@@ -68,7 +69,7 @@ export default function About() {
               position: "absolute",
               inset: 0,
             }}
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=1"
+            src="https://www.youtube.com/embed/eq9KkC1QBbc?controls=1"
             title="Flyer On - Quem somos"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -76,13 +77,6 @@ export default function About() {
         </div>
       </div>
 
-      <style>{`
-        @media (max-width: 768px) {
-          .video-wrapper {
-            padding: 0 20px !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

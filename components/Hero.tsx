@@ -5,9 +5,9 @@ export default function Hero() {
     <section
       id="hero"
       style={{
-        background: "#0D0D0D",
+        background: "#0E296B",
         minHeight: "70vh",
-        padding: "3% 10% 8% 10%",
+        padding: "clamp(40px, 5vw, 60px) clamp(20px, 8vw, 10%)",
         display: "flex",
         flexDirection: "row",
         alignItems: "stretch",
@@ -16,9 +16,9 @@ export default function Hero() {
         flexWrap: "wrap",
         backgroundImage:
           "url('https://flyeron-site.vercel.app/wp-content/uploads/2024/09/Design-sem-nome-1.jpg')",
-        backgroundSize: "100% auto",
+        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "top center",
+        backgroundPosition: "center",
         position: "relative",
       }}
     >
@@ -27,7 +27,7 @@ export default function Hero() {
         style={{
           position: "absolute",
           inset: 0,
-          background: "rgba(13,13,13,0.8)",
+          background: "rgba(14, 41, 107, 0.9)",
           zIndex: 0,
         }}
       />
@@ -41,14 +41,14 @@ export default function Hero() {
           flexDirection: "column",
           justifyContent: "center",
           gap: 25,
-          flex: "1 1 320px",
+          flex: "1 1 280px",
           maxWidth: 600,
         }}
       >
         {/* Logo */}
-        <div style={{ margin: "10px 0 20px -25px" }}>
+        <div style={{ margin: "10px 0 20px 0px" }}>
           <Image
-            src="https://flyeron-site.vercel.app/wp-content/uploads/elementor/thumbs/Logo-Flyer-On-1-qtmjvywa9u0u02mds0of4k81q3e3wiq5t030fnmei0.png"
+            src="/logo.png"
             alt="Logo Flyer On"
             width={180}
             height={52}
@@ -65,7 +65,7 @@ export default function Hero() {
             fontWeight: 600,
             lineHeight: 1.1,
             letterSpacing: -1,
-            color: "#D95032",
+            color: "#FFFFFF",
           }}
         >
           Potencialize o seu negócio no online e multiplique os seus resultados.
@@ -75,7 +75,7 @@ export default function Hero() {
         <p
           style={{
             fontFamily: "'Poppins', sans-serif",
-            fontSize: 20,
+            fontSize: "clamp(16px, 2vw, 20px)",
             fontWeight: 300,
             lineHeight: 1.4,
             color: "#F2F2F2",
@@ -87,7 +87,7 @@ export default function Hero() {
 
         {/* CTA button */}
         <div style={{ marginTop: "4%" }}>
-          <a href="#contato" className="btn-outline">
+          <a href="https://api.whatsapp.com/send?phone=558193257368" target="_blank" rel="noopener noreferrer" className="btn-outline">
             Saiba mais!
           </a>
         </div>
@@ -100,12 +100,9 @@ export default function Hero() {
           zIndex: 1,
           flex: "0 0 55%",
           maxWidth: "55%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
           paddingTop: 80,
         }}
-        className="hidden md:flex"
+        className="hidden md:flex items-center justify-center"
       >
         <Image
           src="https://flyeron-site.vercel.app/wp-content/uploads/elementor/thumbs/Elementos-WordPress-7-qtm9pfq2qwu5fp379rkdvilxoxdzma255e5x6kri04.png"
