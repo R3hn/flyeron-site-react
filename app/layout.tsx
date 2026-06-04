@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Flyer On - Assessoria de Marketing Digital",
   description:
     "A Flyer On é uma assessoria de marketing digital que oferece soluções completas para potencializar negócios no digital e multiplicar resultados.",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Flyer On - Assessoria de Marketing Digital",
     description:
