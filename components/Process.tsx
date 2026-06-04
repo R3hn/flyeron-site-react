@@ -42,7 +42,7 @@ export default function Process() {
       }}
       className="max-md:px-5"
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-start">
+      <div className="flex flex-col md:flex-row gap-16 md:gap-24 items-start" style={{ width: "100%", maxWidth: "1152px", margin: "0 auto" }}>
         {/* Left Column - Sticky */}
         <div
           className="md:w-1/2 md:sticky md:top-32"

@@ -61,11 +61,8 @@ export default function Testimonials() {
 
       {/* Testimonials row */}
       <div
-        style={{
-          display: "grid",
-          gap: 24,
-        }}
-        className="grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto"
+        
+        style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px", width: "100%", maxWidth: "1152px", margin: "0 auto", justifyContent: "center" }}
       >
         {testimonials.map((t) => {
           const initial = t.name.charAt(0).toUpperCase();

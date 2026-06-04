@@ -70,7 +70,7 @@ const casesData = [
 export default function Cases() {
   return (
     <section id="cases" style={{ background: "#0E296B", padding: "clamp(50px, 10vw, 80px) 5%" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+      <div style={{ width: "100%", maxWidth: "100%", margin: "0 auto" }}>
         <p
         style={{
           textAlign: "center",

@@ -12,8 +12,7 @@ export default function Header() {
       className="w-full sticky top-0 z-50"
     >
       <div
-        className="max-w-6xl mx-auto flex items-center justify-between"
-        style={{ padding: "16px clamp(15px, 5vw, 40px)" }}
+        className="w-full flex items-center justify-between" style={{ width: "100%", maxWidth: "1152px", margin: "0 auto", padding: "16px clamp(15px, 5vw, 40px)" }}
       >
         {/* Logo */}
         <Link href="/">
